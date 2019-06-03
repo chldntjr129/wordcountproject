@@ -1,0 +1,33 @@
+<center>
+
+    <style>
+    .q{font-family: 'Jua', sans-serif;
+      font-size: 30px;
+      text-decoration: underline;}
+    .w{color: blue; font-weight: bold;}
+    .e{color: bisque; font-weight: bold;}
+    </style>
+  <link
+    href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+  
+
+
+  <div class="q">
+    당신이 입력한 텍스트는{{ total }} 몇 단어로 구성되어 있습니다.
+  </div>
+
+  <a href="{%url 'home'%}">다시하기</a>
+
+  <div class="w">입력한 텍스트:</div>
+  {{ fulltext }}
+
+  <div class="e">단어 카운트:</div>
+  {% for word, countTotal in dictionary %}
+  {{ word }} - {{ countTotal }}
+  <br />
+  {% endfor %}
+  
+</center>
